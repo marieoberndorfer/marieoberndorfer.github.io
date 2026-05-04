@@ -1,0 +1,167 @@
+/* Aussehen von Webseite an sich*/
+:root {
+  --t: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;          /* Schriftart */
+    height: 100vh;                                      /* ?? */
+    display: flex;                                      /* Aktivieren Flexbox */
+    flex-direction: column;                             /* Vorgabe zur Anordnung der Elemente */
+    justify-content: center;                            /* Position x-Achse */
+    align-items: center;                                /* Position y-Achse */
+    background-color: #b8e1fdad;                      /* Hintergrundfarbe */
+    margin: 0;                                          /* äußerer Abstand */
+    padding: 20px;                                      /* innerer Abstand */
+}
+
+/* Aussehen Überschriften */
+h1 {                                                    
+    font-size: 2rem;                                    /* Schriftgröße */
+    color: #333333;                                   /* Schriftfarbe */
+    margin-bottom: 20px;                                /* Abstand nach unten */
+}
+/* Aussehen Simulationsfläche */
+#simulationwindow {
+    width: 40%;                                       /* Breite; vorher 600px */
+    min-width: 450px;
+    height: 40%;                                      /* Höhe; vorher 400 px */
+    min-height: 120px;
+    background-color: black;                          /* Hintergrundfarbe */
+    border: 5px solid #ffffff7e;                      /* Rand: Breite, Darstellung und Farbe */
+    display: flex;                                      /* Aktivierung Flexbox */
+    justify-content: center;                            /* Position x-Achse */
+    align-items: center;                                /* Position y-Achse */
+    position: relative;                                 /* Art der Positionierung, für Kreise notwendig */
+    overflow: hidden;                                   /* Damit Kreise nicht außerhalb der Grenzen sichtbar sind */
+    margin-bottom: 5px;                                 /* Abstand nach Unten */
+    border-radius: 1%                                   /* Abgerundete Ecken*/
+}
+/*Controlboard*/
+#controlboard {
+    width: 450px;
+    height: 118px;
+    background-color: rgba(0, 0, 0, 0.151);
+    border: 1px solid black;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    position: relative;
+    border-radius: 1%;                                   /* Abgerundete Ecken*/                                       
+    font-size: 18px;
+}
+
+.flex-horizontal {                                      /*Name noch ändern*/
+display: grid;
+margin-top: 5px;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+/*.flex-horizontal {                                Das war Janniks Lösung
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    margin-top: 15px;
+}
+
+/*Buttons*/
+button {
+    padding: 5px 5px;                                 /* innerer Abstand */
+    font-size: 18px;                                    /* Schriftgröße */
+    border: 1px solid black;                          /* Rand */
+    border-radius: 5%;                                 /* abgerundete Ecke */
+    cursor: pointer;                                    /* Verändert Aussehen von Maus-Cursor */
+    background-color: #d3deff;                      /* Farbe von Button */
+    color: rgb(0, 0, 0);                              /* Farbe von Schrift */
+    transition: background-color 0.2s;                  /* ??? */
+}
+/* Pseudoklasse Hover */
+button:hover {
+    background-color: #959db6;                    /* Verändert Farbe der Buttons beim Hovern */
+}
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+  border: 1px solid black;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d3deff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #959db6;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #687c8b;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+/* Rounded sliders Brauche ich das??
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+} */
+
+/* allgemeines Aussehen der Kreise */
+.circle {                                             /* Klasse:Kreise */
+    position: absolute;                               /* Position --> nicht relativ zur Seite sondern genau an einem Ort=Mitte*/
+    border-radius: 50%;                               /* Macht den Kreis rund */
+    background-color: transparent;                    /* Kreis wird transparent, sodass er über JS eingefärbt werden kann; "inherit" wenn Hintergrund gesehen werden soll */
+    z-index: 10;
+}
+
+/* spezifisches Aussehen der Kreise */              
+.circle-lighton {                                     /* Klasse:weißer Kreis */
+    background-color: white;                        /* Farbe */
+}
+
+.circle-lightoff {                                    /* Klasse:schwarzer Kreis */
+    background-color: black;                        /* Farbe */
+}
+
+.circle-filter {                                      /* Klasse:roter Kreis */
+    background-color: rgb(185, 28, 0);              /* Farbe */
+}
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Sprache -->
+<html lang="de">                                                                
+<head>
+    <!-- Was das? -->
+    <meta charset="UTF-8">                                                  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <!-- Name des Tabs -->
+    <title>Ausbreitung von Licht 2</title>      
+    <!-- Verlinkung zum CSS-Stylesheet -->                                                                      
+    <link rel="stylesheet" type="text/css" href="style2.css">                
+</head>
+<body>
+    <h1>Wie breitet sich Licht von einer Lichtquelle aus?</h1>
+    
+    <div id="simulationwindow"></div>
+    <span id="time-display"> 0 </span>
+
+    <div id="controlboard">
+        <div class="flex-horizontal">
+            Licht
+            <label id=light class="switch">                   <!--Slider für Licht-->
+                <input type="checkbox">
+                <span class="slider"></span>                  <!--für ruden slider "slider round"-->
+            </label>
+            <button id="pauseBtn">Stopp</button>
+        </div>
+        <div class="flex-horizontal">
+            Farbfilter
+            <label id=filter class="switch">                   <!--Slider für Farbfilter-->
+                <input type="checkbox">
+                <span class="slider"></span> 
+            </label>
+            <button id="resetBtn">Zurücksetzen</button>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>                  <!-- Verbindung zur Funktion von Buttons -->
+</body>
+</html>

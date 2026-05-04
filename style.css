@@ -1,0 +1,73 @@
+/* Aussehen von Webseite an sich*/
+body {
+    font-family: Arial, Helvetica, sans-serif;          /* Schriftart */
+    height: 100vh;                                      /* Schriftgröße */
+    display: flex;                                      /* Aktivieren Flexbox */
+    flex-direction: column;                             /* Vorgabe zur Anordnung der Elemente */
+    justify-content: center;                            /* Position x-Achse */
+    align-items: center;                                /* Position y-Achse */
+    background-color: #b8fdcfad;                      /* Hintergrundfarbe */
+    margin: 0;                                          /* äußerer Abstand */
+    padding: 20px;                                      /* innerer Abstand */
+}
+
+/* Aussehen Überschriften */
+h1 {                                                    
+    font-size: 2rem;                                    /* Schriftgröße */
+    color: #333333;                                   /* Schriftfarbe */
+    margin-bottom: 20px;                                /* Abstand nach unten */
+}
+/* Aussehen Simulationsfläche */
+#simulationsfläche {
+    width: 40%;                                       /* Breite; vorher 600px */
+    height: 40%;                                      /* Höhe; vorher 400 px */
+    background-color: black;                          /* Hintergrundfarbe */
+    border: 5px solid #ffffff7e;                      /* Rand: Breite, Darstellung und Farbe */
+    display: flex;                                      /* Aktivierung Flexbox */
+    justify-content: center;                            /* Position x-Achse */
+    align-items: center;                                /* Position y-Achse */
+    position: relative;                                 /* Art der Positionierung, für Kreise notwendig */
+    overflow: hidden;                                   /* Damit Kreise nicht außerhalb der Grenzen sichtbar sind */
+}
+/* Box um die Buttons */
+#button-container {
+    margin-top: 20px;                                   /* Abstand nach oben */
+    display: flex;                                      /* Aktivierung Flexbox */
+    gap: 15px;                                          /* Abstand zwischen Buttons */
+    justify-content: center;                            /* Position x-Achse */
+}
+/* Aussehen Buttons */
+button {
+    padding: 10px 20px;                                 /* innerer Abstand */
+    font-size: 1rem;                                    /* Schriftgröße */
+    border: none;                                       /* Rand */
+    border-radius: 5px;                                 /* abgerundete Ecke */
+    cursor: pointer;                                    /* Verändert Aussehen von Maus-Cursor */
+    background-color: #acacacd7;                      /* Farbe von Button */
+    color: rgb(0, 0, 0);                              /* Farbe von Schrift */
+    transition: background-color 0.2s;                  /* ??? */
+}
+/* Pseudoklasse Hover */
+button:hover {
+    background-color: #d1d1d1d7;                    /* Verändert Farbe der Buttons beim Hovern */
+}
+
+/* allgemeines Aussehen der Kreise */
+.circle {                                             /* Klasse:Kreise */
+    position: absolute;                               /* Position --> nicht relativ zur Seite sondern genau an einem Ort=Mitte*/
+    border-radius: 50%;                               /* Macht den Kreis rund */
+    background-color: transparent;                    /* Kreis wird transparent, sodass er über JS eingefärbt werden kann; "inherit" wenn Hintergrund gesehen werden soll */
+}
+
+/* spezifisches Aussehen der Kreise */              
+.circle-white {                                       /* Klasse:weißer Kreis */
+    background-color: white;                        /* Farbe */
+}
+
+.circle-black {                                       /* Klasse:schwarzer Kreis */
+    background-color: black;                        /* Farbe */
+}
+
+.circle-red {                                         /* Klasse:roter Kreis */
+    background-color: rgb(185, 28, 0);              /* Farbe */
+}
