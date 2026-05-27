@@ -16,7 +16,7 @@ const resetBtn = document.getElementById('resetBtn');
 const lightIcon = document.getElementById('light-icon');
 
 
-const initialRadius = 15;
+const initialRadius = 10;
 const lightOnColor = "white";
 const lightOffColor = "black";
 const lightFilterColor = "#ffc341ff";

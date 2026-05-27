@@ -5,7 +5,7 @@ body {
     flex-direction: column;                             /* Vorgabe zur Anordnung der Elemente */
     justify-content: center;                            /* Position x-Achse */
     align-items: center;                                /* Position y-Achse */
-    background-color: #b8e1fdad;                      /* Hintergrundfarbe */
+    background-color: #f6fcffe7;                      /* Hintergrundfarbe */
     margin: 0;                                          /* äußerer Abstand */
     padding: 1rem;                                      /* innerer Abstand */
 }
@@ -42,41 +42,52 @@ canvas {
 #controlboard {
     width: 60%;
     max-width: 50rem;
-    min-width: 25rem;
-    background-color: rgba(0, 0, 0, 0.151);
+    min-width: 35rem;
+    background-color: rgba(0, 0, 0, 0.356);
     border: 1px solid black;
     display: grid;
     justify-content: center;
     align-items: center;
     position: relative;
     border-radius: 1%;                                   /* Abgerundete Ecken*/                                       
-    font-size: 1.5rem;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    font-size: 1.4em;
 }
 
 .controlboard-row {       
   padding: 1.5rem;                
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1em;
 }
+
+.controlboard-row > span {
+  grid-column-start: span 6;
+}
+
+.controlboard-row > label {
+  grid-column-start: span 2;
+}
+
+.controlboard-row > button {
+  grid-column-start: span 4;
+}
+
 /*Buttons*/
 button {
     padding: 5px 5px;                                 /* innerer Abstand */
-    font-size: 18px;                                    /* Schriftgröße */
+    font-size: 1em;                                    /* Schriftgröße */
     border: 1px solid black;                          /* Rand */
     border-radius: 5%;                                 /* abgerundete Ecke */
     cursor: pointer;                                    /* Verändert Aussehen von Maus-Cursor */
-    background-color: #d3deff;                      /* Farbe von Button */
+    background-color: #c5c5c5;                      /* Farbe von Button */
     color: rgb(0, 0, 0);                              /* Farbe von Schrift */
     transition: background-color 0.2s;                  /* ??? */
 }
 /* Pseudoklasse Hover */
 button:hover {
-    background-color: #959db6;                    /* Verändert Farbe der Buttons beim Hovern */
+    background-color: #8f8f8f;                    /* Verändert Farbe der Buttons beim Hovern */
 }
 
 
@@ -111,7 +122,7 @@ button:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #d3deff;
+  background-color: #979797;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -122,15 +133,15 @@ button:hover {
   width: 20px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: #ffffff;
   -webkit-transition: .4s;
   transition: .4s;
 }
 input:checked + .slider {
-  background-color: #959db6;
+  background-color: #c4c6d6;
 }
 input:focus + .slider {
-  box-shadow: 0 0 1px #687c8b;
+  box-shadow: 0 0 1px #8f8f8f;
 }
 input:checked + .slider:before {
   -webkit-transform: translateX(30px);
